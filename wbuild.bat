@@ -13,4 +13,9 @@ for /r . %%a in (*.go) do (
 )
 :: Call `go build` to build the exe, using the list of *.go files 
 :: created before.
-call go build -o bin/goblog.exe %gofiles%
+echo Building with the following go files:
+echo %gofiles%
+echo.
+echo Building with go build
+call go build -o goblog.exe %gofiles%
+echo Build script complete
